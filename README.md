@@ -1,47 +1,76 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=19700382&assignment_repo_type=AssignmentRepo)
-# MongoDB Fundamentals Assignment
+# 📚 PLP Bookstore – MongoDB Fundamentals Assignment
 
-This assignment focuses on learning MongoDB fundamentals including setup, CRUD operations, advanced queries, aggregation pipelines, and indexing.
+## Overview
+This project demonstrates MongoDB fundamentals, including database setup, CRUD operations, advanced queries, aggregation pipelines, and indexing, using a sample bookstore dataset.
 
-## Assignment Overview
+---
 
-You will:
-1. Set up a MongoDB database
-2. Perform basic CRUD operations
-3. Write advanced queries with filtering, projection, and sorting
-4. Create aggregation pipelines for data analysis
-5. Implement indexing for performance optimization
+## 🚀 Setup Instructions
 
-## Getting Started
+### 1. Prerequisites
+- [Node.js](https://nodejs.org/) installed
+- [MongoDB Community Edition](https://www.mongodb.com/try/download/community) running locally **OR** a [MongoDB Atlas](https://www.mongodb.com/atlas/database) cluster
+- `npm` (comes with Node.js)
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Install MongoDB locally or set up a MongoDB Atlas account
-4. Run the provided `insert_books.js` script to populate your database
-5. Complete the tasks in the assignment document
+### 2. Install Dependencies
+Open a terminal in the project folder and run:
 
-## Files Included
+npm install mongodb
 
-- `Week1-Assignment.md`: Detailed assignment instructions
-- `insert_books.js`: Script to populate your MongoDB database with sample book data
+### 3. Populate the Database
+Run the provided script to insert sample book data:
 
-## Requirements
+node insert_books.js
 
-- Node.js (v18 or higher)
-- MongoDB (local installation or Atlas account)
-- MongoDB Shell (mongosh) or MongoDB Compass
+- This will connect to your MongoDB server and populate the `plp_bookstore` database with a `books` collection.
 
-## Submission
+### 4. Run MongoDB Queries
+You can run the queries in `queries.js` using the MongoDB Shell (`mongosh`):
 
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+1. Start the shell:
+    ```
+    mongosh
+    ```
+2. Switch to the database:
+    ```
+    use plp_bookstore
+    ```
+3. Copy and paste queries from `queries.js` into the shell to execute them.
 
-1. Complete all tasks in the assignment
-2. Add your `queries.js` file with all required MongoDB queries
-3. Include a screenshot of your MongoDB database
-4. Update the README.md with your specific setup instructions
+---
 
-## Resources
+## 📂 Project Files
 
-- [MongoDB Documentation](https://docs.mongodb.com/)
-- [MongoDB University](https://university.mongodb.com/)
-- [MongoDB Node.js Driver](https://mongodb.github.io/node-mongodb-native/) 
+- `insert_books.js` – Script to insert sample book data into MongoDB
+- `queries.js` – All required MongoDB queries for the assignment
+- `Week1-Assignment.md` – Assignment instructions and requirements
+- `README.md` – (this file) Setup and usage instructions
+
+---
+
+## 🖼️ Viewing Data
+
+- **MongoDB Compass:**  
+  Open Compass, connect to your server, and browse the `plp_bookstore` database and `books` collection to view your data visually.
+
+---
+
+## 📸 Submission
+
+- Ensure you have:
+  - `insert_books.js`
+  - `queries.js`
+  - `README.md` (this file)
+  - A screenshot of your MongoDB Compass or Atlas showing your collections and sample data
+- Commit and push all files to your GitHub repository.
+
+---
+
+## ℹ️ Notes
+
+- Do **not** add `node_modules/` or sensitive files (like `.env`) to your repository.
+- Keep `package.json` and `package-lock.json` in your repo for reproducibility.
+- For any issues, refer to the comments in `queries.js` or the assignment document.
+
+---
+
